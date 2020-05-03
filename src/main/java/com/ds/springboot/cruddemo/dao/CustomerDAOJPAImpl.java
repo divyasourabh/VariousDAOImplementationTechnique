@@ -38,9 +38,6 @@ public class CustomerDAOJPAImpl implements CustomerDAO{
 
 	@Override
 	public void saveCustomer(Customer customer) {
-		// save or update the customer
-		customer.setId(0);
-
 		Customer customerNew = entityManager.merge(customer);
 
 		// update with id from db ... so we can get generated id for save/insert

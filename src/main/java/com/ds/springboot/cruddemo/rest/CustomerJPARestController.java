@@ -21,12 +21,12 @@ import com.ds.springboot.cruddemo.service.CustomerService;
 
 @RestController
 @RequestMapping("/jpa/api")
-public class EmployeeRestController {
+public class CustomerJPARestController {
 
 	private CustomerService customerService;
 	
 	@Autowired
-	public EmployeeRestController (@Qualifier("customerServiceImpl") CustomerService customerService) {
+	public CustomerJPARestController (@Qualifier("customerJPAServiceImpl") CustomerService customerService) {
 		this.customerService = customerService;
 	}
 	
